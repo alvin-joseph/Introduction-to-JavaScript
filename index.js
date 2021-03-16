@@ -58,11 +58,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
-
+console.log(multiply(1,5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -149,12 +149,12 @@ function game(user, computer){
       // string template literal
     }else if(user === 'rock' && computer === 'scissors'){
       return 'you win!';
-}   }else if(use ==='paper' && computer === 'rock'){
+    }else if(use ==='paper' && computer === 'rock'){
       return 'you win!';
     }else{
       return 'you lose!';
     }
-  
+}
   console.log('task 4', game('rock', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
