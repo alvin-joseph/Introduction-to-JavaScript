@@ -18,7 +18,11 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 20;
 
+if(votingAge >= 18){
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -31,8 +35,13 @@ Do the following:
    HINT: no function required
 */
 
+let pie = 'berry';
+let cake = 'chocolate';
 
-
+if (cake = 'chocolate'){
+  pie = 'apple';
+  console.log(pie);
+}
 
 
 /*
@@ -46,8 +55,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let year = "1999";
 
-
+parseInt(year);
+console.log(year);
 
 /*
 Task 1d - Multiply
@@ -74,11 +85,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
-
+console.log(dogYears(4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,9 +118,25 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age >= 1 && weight <=5){
+      return weight * .05;
+    }else if(age >= 1 && weight >= 6 && weight <= 10){
+      return weight * .04;
+    }else if(age >= 1 && weight >=11 && weight <= 15){
+      return weight * .03;
+    }else if(age >= 1 && weight > 15){
+      return weight * .02;
+    }else if(age >= 2/12 && age <= 4/12){
+      return weight * .10;
+    }else if(age >= 4/12 && age <= 7/12){
+      return weight * .10;
+    }else if(age >= 7/12 && age <= 12/12){
+      return weight * .04;
+    }
   }
+
+  console.log(hungryDog(15,1));
 
 
 
@@ -133,7 +160,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = Math.random(3);
+let computer = Math.random();
 if(computer <= 0.34){
   computer = 'rock';
 }else if(computer <= 0.67){
@@ -149,7 +176,7 @@ function game(user, computer){
       // string template literal
     }else if(user === 'rock' && computer === 'scissors'){
       return 'you win!';
-    }else if(use ==='paper' && computer === 'rock'){
+    }else if(user ==='paper' && computer === 'rock'){
       return 'you win!';
     }else{
       return 'you lose!';
