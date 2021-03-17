@@ -21,7 +21,7 @@ Do the following:
 let votingAge = 20;
 
 if(votingAge >= 18){
-  console.log(true);
+  console.log('task 1a', true);
 }
 
 /*
@@ -40,7 +40,7 @@ let cake = 'chocolate';
 
 if (cake = 'chocolate'){
   pie = 'apple';
-  console.log(pie);
+  console.log('task 1b', pie);
 }
 
 
@@ -58,7 +58,7 @@ Do the following:
 let year = "1999";
 
 parseInt(year);
-console.log(year);
+console.log('task 1c', year);
 
 /*
 Task 1d - Multiply
@@ -73,7 +73,7 @@ function multiply(a, b){
     return a * b;
   }
 
-console.log(multiply(1,5));
+console.log('task 1d', multiply(1,5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -89,7 +89,7 @@ function dogYears(age){
     return age * 7;
 }
 
-console.log(dogYears(4));
+console.log('task 2', dogYears(4));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -136,7 +136,7 @@ function hungryDog(weight, age){
     }
   }
 
-  console.log(hungryDog(15,1));
+  console.log('task 3', hungryDog(15,1));
 
 
 
@@ -168,7 +168,7 @@ if(computer <= 0.34){
 }else if(computer > 0.67){
   computer = 'scissors';
 }
-console.log(computer);
+console.log('Computer picked:', computer);
 
 function game(user, computer){
     if(user === computer){
@@ -182,7 +182,7 @@ function game(user, computer){
       return 'you lose!';
     }
 }
-  console.log('task 4', game('rock', computer));
+  console.log('task 4', game('paper', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -195,9 +195,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return kilometers * 0.621371;
   }
+
+console.log('task 5a', miles(5), 'miles');
 
 
 
@@ -209,9 +211,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm * 0.032808;
   }
+
+console.log('task 5b', feet(8), 'feet');
  
 
 
@@ -225,9 +229,23 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(startingNumber){
+    let bottlesLeft;
+    for(let i = startingNumber; i >= 1; i--){
+      if (i === 1) {
+        bottlesLeft = "No bottles of soda on the wall";
+      }else {
+        bottlesLeft = i - 1 + " bottles of soda on the wall";
+      }console.log(i+ " " + "bottles of soda on the wall,");
+      console.log(i+ " " + "bottles" + " of soda,");
+      console.log("Take one down, pass it around,");
+      console.log(bottlesLeft);
+
+    }
+
   }
+
+ console.log(annoyingSong(4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -245,9 +263,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+    if(score >= 90 && score <= 100){
+      return 'you got an A';
+    }else if(score >= 80 && score <= 89){
+      return 'you got a B';
+    }else if(score >= 70 && score <= 79){
+      return 'you got a C';
+    }else if(score >= 60 && score <= 69){
+      return 'you got a D';
+    }else if(score <= 59){
+      return 'you got an F';
+    }  
   }
+
+  console.log('task 7', grade(89));
   
   
 
